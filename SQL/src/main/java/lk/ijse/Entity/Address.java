@@ -2,7 +2,6 @@ package lk.ijse.Entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 @Entity
@@ -13,12 +12,12 @@ public class Address {
     private String country;
 
     @ManyToOne
-    private Customer customer;
+    private Student customer;
 
     public Address() {
     }
 
-    public Address(int aid, String city, String country, Customer customer) {
+    public Address(int aid, String city, String country, Student customer) {
         this.aid = aid;
         this.city = city;
         this.country = country;
@@ -49,11 +48,11 @@ public class Address {
         this.country = country;
     }
 
-    public Customer getCustomer() {
+    public Student getCustomer() {
         return customer;
     }
 
-    public void setCustomer(Customer customer) {
+    public void setCustomer(Student customer) {
         this.customer = customer;
     }
 }

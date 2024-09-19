@@ -3,7 +3,8 @@ package lk.ijse.confit;
 
 
 import lk.ijse.Entity.Address;
-import lk.ijse.Entity.Customer;
+import lk.ijse.Entity.Laptop;
+import lk.ijse.Entity.Student;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -14,7 +15,7 @@ public class FactoryConfiguration {
     private static SessionFactory sessionFactory;
 
     private FactoryConfiguration() {
-       Configuration configuration=new Configuration().configure().addAnnotatedClass(Customer.class).addAnnotatedClass(Address.class);
+       Configuration configuration=new Configuration().configure().addAnnotatedClass(Student.class).addAnnotatedClass(Laptop.class);
         sessionFactory = configuration.buildSessionFactory();
     }
 

@@ -7,30 +7,30 @@ import jakarta.persistence.OneToMany;
 import java.util.List;
 
 @Entity
-public class Customer {
+public class Student {
     @Id
-    private int CusId;
+    private int StuID;
     private String Name;
     private String Phone;
 
-    @OneToMany(mappedBy = "customer")
-    private List<Address> addresses;
+    @OneToMany(mappedBy = "student")
+    private List<Laptop> laptops;
 
-    public Customer() {}
+    public Student() {}
 
-    public Customer(int cusId, String name, String phone, List<Address> addresses) {
-        CusId = cusId;
+    public Student(int stuID, String name, String phone, List<Laptop> laptops) {
+        StuID = stuID;
         Name = name;
         Phone = phone;
-        this.addresses = addresses;
+        this.laptops = laptops;
     }
 
-    public int getCusId() {
-        return CusId;
+    public int getStuID() {
+        return StuID;
     }
 
-    public void setCusId(int cusId) {
-        CusId = cusId;
+    public void setStuID(int stuID) {
+        StuID = stuID;
     }
 
     public String getName() {
@@ -49,21 +49,11 @@ public class Customer {
         Phone = phone;
     }
 
-    public List<Address> getAddresses() {
-        return addresses;
+    public List<Laptop> getLaptops() {
+        return laptops;
     }
 
-    public void setAddresses(List<Address> addresses) {
-        this.addresses = addresses;
-    }
-
-    @Override
-    public String toString() {
-        return "Customer{" +
-                "CusId=" + CusId +
-                ", Name='" + Name + '\'' +
-                ", Phone='" + Phone + '\'' +
-                ", addresses=" + addresses +
-                '}';
+    public void setLaptops(List<Laptop> laptops) {
+        this.laptops = laptops;
     }
 }
