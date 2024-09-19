@@ -78,7 +78,7 @@ public class Main {
         Query query3 = session.createQuery("SELECT a.id, a.model FROM Laptop a INNER JOIN a.student s");
         List<Object[]> result3 = query3.list();
         for (Object[] row : result3) {
-            System.out.println("Laptop ID: " + row[0] + ", model: " + row[1]  );
+            System.out.println("Laptop ID: " + row[0] + ", model: " + row[1] );
         }
 
 
